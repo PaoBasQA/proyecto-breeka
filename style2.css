@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Fondo claro para toda la página */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribuye espacio entre elementos */
+  align-items: center; /* Alinea verticalmente */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Logo */
+.logo img {
+  width: 70px; /* Tamaño del logo */
+  height: auto; /* Mantener proporción */
+  transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.logo img:hover {
+  transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+}
+
+/* Menú de navegación */
+.menu {
+  display: flex;
+  gap: 20px; /* Espacio entre los elementos del menú */
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none; /* Quita el subrayado */
+  color: #5E4DC3; /* Violeta para los enlaces */
+  font-size: 16px; /* Tamaño del texto */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.menu a:hover {
+  color: #EE4D36; /* Naranja al pasar el mouse */
+}
+
+/* Botón de contacto */
+.contacto a {
+  text-decoration: none;
+  color: #ffffff; /* Texto blanco */
+  background-color: #EE4D36; /* Naranja para el fondo */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+.contacto a:hover {
+  background-color: #ba3d2e; /* Naranja más oscuro al pasar el mouse */
+}
+
+
+/*main*/
+.container{
+  display: flex;
+  height: 100vh;
+}
+
+.presentacion-contenido{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.presentacion-formulario{    
+  width: 252px;
+  height: 54px;
+  text-decoration: none;
+  color: #ffffff; /* Texto blanco */
+  background-color: #EE4D36; /* Naranja para el fondo */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+/* Footer */
+footer {
+  background-color: #5E4DC3; /* Violeta para el fondo */
+  color: #ffffff; /* Texto blanco */
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye espacio entre las tres secciones */
+  align-items: flex-start; /* Alinea elementos en la parte superior */
+  max-width: 1200px; /* Ancho máximo del footer */
+  margin: 0 auto; /* Centra el contenido */
+  padding: 0 20px; /* Espaciado horizontal */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1; /* Divide el espacio equitativamente */
+}
+
+.footer-left p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-left a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.footer-center {
+  text-align: center; /* Centra el texto */
+}
+
+.footer-right {
+  text-align: right; /* Alinea el texto a la derecha */
+}
+
+
+
+
+

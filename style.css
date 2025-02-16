@@ -4,11 +4,67 @@
     box-sizing: border-box;
 }
 
-.logo{
-    width: 44px;
-    height: 35px;
+/*Header*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Esto separa el logo, el menú y el botón */
+    align-items: center; /* Alinea verticalmente todos los elementos */
+    padding: 0 20px; /* Espaciado interno */
+    background-color: #f8f8f8; /* Color de fondo */
+    border-bottom: 1px solid #ddd; /* Borde inferior para darle estilo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+/* Logo */
+.logo img {
+    width: 60px; /* Ajusta el ancho según necesites */
+    height: auto; /* Mantiene la proporción */
+    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+}
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos del menú */
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #333; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.menu a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+/* Botón de contacto */
+.contacto a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+.contacto a:hover {
+    background-color: #0056b3; /* Oscurece el fondo al pasar el mouse */
+ 
+}
+
+
+/*main*/
 .container{
     display: flex;
     height: 100vh;
@@ -33,7 +89,8 @@
 .presentacion-formulario{    
     width: 252px;
     height: 54px;
-    border: 1px solid #22D4FD;
+    display: flex;
+    justify-content: center;
     border-radius: 8px;
     padding: 10px;
     background-color: #EE4D3C;
@@ -45,5 +102,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
 }
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
