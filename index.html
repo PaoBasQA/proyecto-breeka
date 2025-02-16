@@ -10,49 +10,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <!-- Barra de navegación -->
     <header>
       <nav class="navbar">
         <div class="logo">
           <img src="./assets/breeka-logo.svg" alt="Logo de la empresa" />
         </div>
-        <!-- Ícono de hamburguesa -->
-        <div class="menu-icon" onclick="toggleMenu()">
-          &#9776;
-        </div>
+        <!-- Ícono de hamburguesa (oculto en pantallas grandes) -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <ul class="menu" id="menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
         </ul>
         <div class="contacto">
-          <a href="#contacto">Contacto</a>
+            <a href="#contacto">Contacto</a>
         </div>
-      </nav>
+    </nav>
     </header>
-    <main>
-        <h2 style="text-align: center; margin-top: 50px; color: #5E4DC3;">
-            Bienvenido a nuestra página web
-          </h2>
-          <p style="text-align: center; color: #000000; margin: 20px;">
-            Aquí puedes encontrar información sobre nuestros servicios y proyectos.
-          </p>
 
+    <!-- Contenido principal -->
+    <main>
+        <h2 class="fade-in" style="text-align: center; margin-top: 50px; color: #5E4DC3;">
+          Bienvenido a nuestra página web
+        </h2>
+        <p class="fade-in" style="text-align: center; color: #000000; margin: 20px;">
+          Aquí puedes encontrar información sobre nuestros servicios y proyectos.
+        </p>
         <section class="presentacion">
-            <div class="presentacion-contenido">
-                <h1 style="margin-top: 50px; color: #5E4DC3;">Somos <strong>Breeka</strong></h1>
-                <h2>Transformamos ideas en soluciones web potentes y escalables.</h2>
-            </div>
+          <div class="presentacion-contenido">
+              <h1 style="margin-top: 50px; color: #5E4DC3;">Somos <strong>Breeka</strong></h1>
+              <h2>Transformamos ideas en soluciones web potentes y escalables.</h2>
+          </div>
+        
             <div class="presentacion-formulario">
-                <a href="#formulario-contacto">¡Comencemos!</a>
+              <a href="#formulario-contacto">¡Comencemos!</a>
             </div>
         </section>
         <section class="decoracion">
             <div class="presentacion-dipledesktop">
-                <img src="dipledesktop.png" alt="">
-            </div>
+                <img src="dipledesktop.png" alt="Imagen decorativa">
+            </div>   
         </section>
     </main>
 
+    <!-- Pie de página -->
     <footer>
         <div class="footer-container">
           <!-- Lado izquierdo -->
@@ -76,14 +78,15 @@
       
           <!-- Lado derecho -->
           <div class="footer-right">
-            <p>
-              Hecho en 
-              <img src="assets/icons8-emoji-argentina-48.png" alt="Bandera de Argentina" width="45" height="45" style="vertical-align: middle;" />
-            
-            </p>
+              <p>
+                Hecho en 
+                <img src="assets/icons8-emoji-argentina-48.png" alt="Bandera de Argentina" width="45" height="45" style="vertical-align: middle;" />
+              </p>
           </div>
         </div>
-    </footer>    
+    </footer>   
+    
+    <!-- Archivo JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

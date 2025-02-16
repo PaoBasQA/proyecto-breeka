@@ -12,6 +12,7 @@ body {
   background-color: #f9f9f9; /* Fondo claro para toda la página */
 }
 
+/* Barra de navegación */
 .navbar {
   display: flex;
   justify-content: space-between; /* Distribuye espacio entre elementos */
@@ -29,7 +30,8 @@ body {
 }
 
 .logo img:hover {
-  transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+  transform: scale(1.1) rotate(5deg); /* Escala y rota ligeramente */
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); /* Agrega un brillo */
 }
 
 /* Menú de navegación */
@@ -37,9 +39,7 @@ body {
   display: flex;
   gap: 20px; /* Espacio entre los elementos del menú */
   list-style: none; /* Quita los puntos de la lista */
-  margin: 0;
-  padding: 0;
-}
+  }
 
 .menu a {
   text-decoration: none; /* Quita el subrayado */
@@ -66,6 +66,74 @@ body {
 .contacto a:hover {
   background-color: #ba3d2e; /* Naranja más oscuro al pasar el mouse */
 }
+
+/* Ícono de hamburguesa (oculto en pantallas grandes) */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*main*/
+/* Contenido principal */
+.presentacion-contenido,
+.presentacion-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.presentacion-contenido,
+.presentacion-formulario,
+.presentacion-dipledesktop {
+  flex: 1; /* Ambas columnas ocupan el mismo espacio */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.presentacion-contenido{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  }
+
+.presentacion-formulario{    
+  width: 210px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #EE4D3C;
+}
+
+/* Animación para el botón */
+.presentacion-formulario {
+  background-color: #EE4D36;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.presentacion-formulario:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+}
+
+/*.presentacion-dipledesktop{
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}*/
+
 
 /* Footer */
 footer {
@@ -94,72 +162,115 @@ footer {
   font-size: 14px;
   margin: 0;
 }
-
 .footer-left a:hover {
   text-decoration: underline; /* Subrayado al pasar el mouse */
 }
-
 .footer-center {
   text-align: center; /* Centra el texto */
 }
-
 .footer-right {
   text-align: right; /* Alinea el texto a la derecha */
 }
 
+/* Animación para el footer */
+.footer-left,
+.footer-center,
+.footer-right {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.footer-left.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s; /* Retraso para el primer elemento */
+}
+
+.footer-center.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s; /* Retraso para el segundo elemento */
+}
+
+.footer-right.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s; /* Retraso para el tercer elemento */
+}
+
+
 /* Media Queries para diseño responsive */
 @media (max-width: 768px) {
   /* Navbar */
-  .navbar {
+.navbar {
       flex-direction: column; /* Apila los elementos verticalmente */
       align-items: flex-start; /* Alinea elementos a la izquierda */
-  }
+}
 
   /* Menú de navegación */
-  .menu {
-      display: none; /* Oculta el menú por defecto */
-      flex-direction: column; /* Apila los enlaces verticalmente */
-      width: 100%; /* Ocupa todo el ancho */
-      background-color: #ffffff; /* Fondo blanco */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  }
+  /* Estilos del menú */
+.menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 0; /* Inicialmente oculto */
+  overflow: hidden; /* Oculta el contenido mientras está colapsado */
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Transición suave */
+}
 
-  .menu.active {
-      display: flex; /* Muestra el menú cuando está activo */
-  }
+.menu.active {
+  display: flex;
+  max-height: 300px; /* Altura máxima para mostrar el menú */
+  opacity: 1; /* Aparece gradualmente */
+}
 
-  .menu li {
+.menu li {
       text-align: center; /* Centra los enlaces */
       padding: 10px 0; /* Espaciado interno */
-  }
+}
 
   /* Ícono de hamburguesa */
-  .menu-icon {
+.menu-icon {
       font-size: 24px;
       cursor: pointer;
       display: block; /* Muestra el ícono */
-  }
+}
 
   /* Logo */
-  .logo img {
+.logo img {
       width: 50px; /* Reduce el tamaño del logo */
-  }
+}
 
   /* Botón de contacto */
-  .contacto a {
+.contacto a {
       padding: 8px 12px; /* Reduce el tamaño del botón */
       font-size: 14px;
-  }
+}
 
   /* Footer */
-  .footer-container {
+.footer-container {
       flex-direction: column; /* Apila las columnas verticalmente */
       gap: 20px; /* Espacio entre las secciones */
-  }
+}
 
-  .footer-left,
-  .footer-center,
-  .footer-right {
+.footer-left,
+.footer-center,
+.footer-right {
       text-align: center; /* Centra el texto */
   }
+}
+
+/* Animación fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* Empieza ligeramente hacia abajo */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0); /* Mueve hacia arriba */
 }
