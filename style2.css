@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos generales */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -65,32 +67,6 @@ body {
   background-color: #ba3d2e; /* Naranja más oscuro al pasar el mouse */
 }
 
-
-/*main*/
-.container{
-  display: flex;
-  height: 100vh;
-}
-
-.presentacion-contenido{
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.presentacion-formulario{    
-  width: 252px;
-  height: 54px;
-  text-decoration: none;
-  color: #ffffff; /* Texto blanco */
-  background-color: #EE4D36; /* Naranja para el fondo */
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 16px;
-  text-align: center;
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
-}
-
 /* Footer */
 footer {
   background-color: #5E4DC3; /* Violeta para el fondo */
@@ -131,7 +107,59 @@ footer {
   text-align: right; /* Alinea el texto a la derecha */
 }
 
+/* Media Queries para diseño responsive */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+      flex-direction: column; /* Apila los elementos verticalmente */
+      align-items: flex-start; /* Alinea elementos a la izquierda */
+  }
 
+  /* Menú de navegación */
+  .menu {
+      display: none; /* Oculta el menú por defecto */
+      flex-direction: column; /* Apila los enlaces verticalmente */
+      width: 100%; /* Ocupa todo el ancho */
+      background-color: #ffffff; /* Fondo blanco */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
 
+  .menu.active {
+      display: flex; /* Muestra el menú cuando está activo */
+  }
 
+  .menu li {
+      text-align: center; /* Centra los enlaces */
+      padding: 10px 0; /* Espaciado interno */
+  }
 
+  /* Ícono de hamburguesa */
+  .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+      display: block; /* Muestra el ícono */
+  }
+
+  /* Logo */
+  .logo img {
+      width: 50px; /* Reduce el tamaño del logo */
+  }
+
+  /* Botón de contacto */
+  .contacto a {
+      padding: 8px 12px; /* Reduce el tamaño del botón */
+      font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-container {
+      flex-direction: column; /* Apila las columnas verticalmente */
+      gap: 20px; /* Espacio entre las secciones */
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+      text-align: center; /* Centra el texto */
+  }
+}

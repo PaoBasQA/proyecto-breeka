@@ -11,19 +11,23 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="./assets/breeka-logo.svg" alt="Logo de la empresa" />
-            </div>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-            </ul>
-                <div class="contacto">
-                  <a href="#contacto">Contacto</a>
-                </div>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./assets/breeka-logo.svg" alt="Logo de la empresa" />
+        </div>
+        <!-- Ícono de hamburguesa -->
+        <div class="menu-icon" onclick="toggleMenu()">
+          &#9776;
+        </div>
+        <ul class="menu" id="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+        </ul>
+        <div class="contacto">
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
     </header>
     <main>
         <h2 style="text-align: center; margin-top: 50px; color: #5E4DC3;">
@@ -80,6 +84,6 @@
           </div>
         </div>
     </footer>    
-    
+  <script src="script.js"></script>
 </body>
 </html>
