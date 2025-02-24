@@ -15,7 +15,7 @@ body {
 /* Barra de navegación */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Distribuye espacio entre elementos */
+  justify-content: flex-end; /* Alinea todo el contenido a la derecha */
   align-items: center; /* Alinea verticalmente */
   padding: 10px 20px; /* Espaciado interno */
   background-color: #ffffff; /* Fondo blanco */
@@ -23,23 +23,31 @@ body {
 }
 
 /* Logo */
-.logo img {
-  width: 70px; /* Tamaño del logo */
-  height: auto; /* Mantener proporción */
-  transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+.logo {
+  margin-right: auto; /* Empuja el logo hacia la izquierda */
+  display: flex;
+  align-items: center;
 }
 
+.logo img {
+  width: 70px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
 .logo img:hover {
-  transform: scale(1.1) rotate(5deg); /* Escala y rota ligeramente */
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); /* Agrega un brillo */
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
 /* Menú de navegación */
 .menu {
   display: flex;
-  gap: 20px; /* Espacio entre los elementos del menú */
-  list-style: none; /* Quita los puntos de la lista */
-  }
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Alinea los elementos del menú verticalmente */
+}
 
 .menu a {
   text-decoration: none; /* Quita el subrayado */
@@ -53,6 +61,10 @@ body {
 }
 
 /* Botón de contacto */
+.contacto {
+  margin-left: 20px; /* Espacio entre el menú y el botón de contacto */
+}
+
 .contacto a {
   text-decoration: none;
   color: #ffffff; /* Texto blanco */
@@ -76,64 +88,122 @@ body {
 
 /*main*/
 /* Contenido principal */
-.presentacion-contenido,
-.presentacion-formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.presentacion-contenido,
-.presentacion-formulario,
-.presentacion-dipledesktop {
-  flex: 1; /* Ambas columnas ocupan el mismo espacio */
+main {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  flex-direction: column; /* Apila las secciones verticalmente */
+  align-items: center; /* Centra horizontalmente */
 }
 
-.presentacion-contenido{
+/* Sección Superior */
+.presentacion {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  }
-
-.presentacion-formulario{    
-  width: 210px;
-  height: 54px;
-  display: flex;
+  width: 100%; /* Ancho completo */
+  height: 600px; /* Altura fija */
+  align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  padding: 10px;
-  color: #ffffff;
-  background-color: #EE4D3C;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo claro */
+  flex: 1; /* Ocupa el espacio disponible */
 }
 
-/* Animación para el botón */
+.presentacion-contenido h1,
+.presentacion-contenido h2 {
+  margin-bottom: 20px;
+}
 .presentacion-formulario {
   background-color: #EE4D36;
   padding: 10px 15px;
   border-radius: 5px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff; /* Agregamos este estilo para hacer el texto blanco */
 }
 .presentacion-formulario:hover {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/*.presentacion-dipledesktop{
-  max-width: 100%;
-  height: auto;
+/* Sección Inferior (Formulario) */
+.formulario {
+  width: 100%; /* Ancho completo */
+  height: 728px; /* Cambiamos de altura fija a automática */
+  background-color: #80DDEF; /* Color de fondo */
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}*/
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  padding: 20px;
+  gap: 40px;
+}
 
+/* Estilo para el texto motivacional */
+.texto-motivacional {
+  text-align: center; /* Centrado horizontalmente */
+  font-size: 20px; /* Tamaño moderado */
+  font-weight: bold; /* Negrita para destacar */
+  color: #5E4DC3; /* Violeta como color principal */
+  margin-bottom: 20px; /* Espacio hacia abajo para separarlo del formulario */
+  text-transform: uppercase; /* Opcional: texto en mayúsculas para dar más énfasis */
+  letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+}
+
+/* Estilos del formulario */
+form {
+  width: 100%;
+  max-width: 600px; /* Ancho máximo del formulario */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: none; /* Desactiva el redimensionamiento manual */
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #F8BA3D;
+  color: #5E4DC3;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #D69B33;
+}
 
 /* Footer */
 footer {
@@ -155,19 +225,32 @@ footer {
 .footer-left,
 .footer-center,
 .footer-right {
-  flex: 1; /* Divide el espacio equitativamente */
+    flex: 1;
 }
 
-.footer-left p {
-  font-size: 14px;
-  margin: 0;
+.footer-left p,
+.footer-center p,
+.footer-right p {
+    font-size: 14px;
+    margin: 0;
 }
+
 .footer-left a:hover {
   text-decoration: underline; /* Subrayado al pasar el mouse */
 }
+
 .footer-center {
   text-align: center; /* Centra el texto */
+  /* Alinear el texto del footer-center con el footer-left */
+  display: flex;
+  align-items: flex-end; /* Alinea el texto hacia abajo */
+  justify-content: center; /* Centra horizontalmente */
 }
+
+.footer-center p {
+  margin-top: 10px; /* Espacio para alinearlo con el segundo párrafo del footer-left */
+}
+  
 .footer-right {
   text-align: right; /* Alinea el texto a la derecha */
 }

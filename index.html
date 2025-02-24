@@ -37,21 +37,37 @@
         <p class="fade-in" style="text-align: center; color: #000000; margin: 20px;">
           Aquí puedes encontrar información sobre nuestros servicios y proyectos.
         </p>
+
+    <!-- Parte Superior -->
         <section class="presentacion">
           <div class="presentacion-contenido">
               <h1 style="margin-top: 50px; color: #5E4DC3;">Somos <strong>Breeka</strong></h1>
               <h2>Transformamos ideas en soluciones web potentes y escalables.</h2>
           </div>
-        
-            <div class="presentacion-formulario">
+          <div class="presentacion-formulario">
               <a href="#formulario-contacto">¡Comencemos!</a>
+          </div>
+        </section>
+
+    <!-- Parte Inferior (Formulario) -->
+      <section class="formulario">
+        <p class="texto-motivacional" style="text-align: center; font-size: 20px; color: #5E4DC3; font-weight: bold;">
+          ¡Construyamos algo juntos!
+        </p>
+        <form id="formulario-contacto">
+            <h2 style="text-align: center; color: #EE4D3C; margin-top: 20px;">Contacto</h2>
+            <div class="form-group">
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
             </div>
-        </section>
-        <section class="decoracion">
-            <div class="presentacion-dipledesktop">
-                <img src="dipledesktop.png" alt="Imagen decorativa">
-            </div>   
-        </section>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Tu email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="mensaje" name="mensaje" placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+      </section>
     </main>
 
     <!-- Pie de página -->
@@ -70,7 +86,7 @@
               <a href="#terminos" style="color: #ffffff; text-decoration: none;">Términos y condiciones</a>
             </p>
           </div>
-      
+          
           <!-- Centro -->
           <div class="footer-center">
             <p>&copy; 2025 Breeka. Todos los derechos reservados.</p>
